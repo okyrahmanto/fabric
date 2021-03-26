@@ -5,7 +5,12 @@
 ARG GO_VER
 ARG ALPINE_VER
 FROM golang:${GO_VER}-alpine${ALPINE_VER}
+#FROM golang:${GO_VER}-buster
 RUN apk add --no-cache \
+#RUN apt install -y \
+	bash \
+#	make \
+	binutils-gold \
 	g++ \
 	gcc \
 	git \

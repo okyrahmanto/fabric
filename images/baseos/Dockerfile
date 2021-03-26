@@ -7,5 +7,6 @@ ARG ALPINE_VER
 
 FROM alpine:${ALPINE_VER} as base
 RUN apk add --no-cache tzdata
+#RUN apt install -y bash;
 RUN addgroup -g 500 chaincode && adduser -u 500 -D -h /home/chaincode -G chaincode chaincode
 USER chaincode
